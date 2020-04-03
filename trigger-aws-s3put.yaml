@@ -1,0 +1,14 @@
+apiVersion: eventing.knative.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: konnek-trigger-aws-s3put
+spec:
+  broker: default
+  filter:
+    attributes:
+      type: com.aws.s3.put
+  subscriber:
+    ref:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      name: konnek-consumer
