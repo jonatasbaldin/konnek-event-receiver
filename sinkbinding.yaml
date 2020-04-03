@@ -1,0 +1,14 @@
+apiVersion: sources.knative.dev/v1alpha1
+kind: SinkBinding
+metadata:
+  name: konnek-sink-binding
+spec:
+  subject:
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    name: konnek-knative-receiver
+sink:
+    ref:
+      apiVersion: eventing.knative.dev/v1alpha1
+      kind: Broker
+      name: default
