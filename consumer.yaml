@@ -1,4 +1,4 @@
-apiVersion: serving.knative.dev/v1alpha1
+apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
   name: konnek-consumer
@@ -7,5 +7,5 @@ metadata:
 spec:
   template:
     spec:
-      container:
-        image: jonatasbaldin/konnek-knative-consumer
+      containers:
+      - image: jonatasbaldin/konnek-knative-consumer

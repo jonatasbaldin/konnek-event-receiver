@@ -1,9 +1,9 @@
-apiVersion: serving.knative.dev/v1alpha1
+apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
   name: konnek-receiver
 spec:
   template:
     spec:
-      container:
-        image: jonatasbaldin/konnek-knative-receiver
+      containers:
+      - image: jonatasbaldin/konnek-knative-receiver
