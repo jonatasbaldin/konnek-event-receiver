@@ -8,4 +8,4 @@ spec:
   template:
     spec:
       containers:
-      - image: jonatasbaldin/konnek-knative-consumer
+      - image: konnek/consumer

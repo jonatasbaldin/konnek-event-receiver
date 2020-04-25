@@ -4,6 +4,9 @@ metadata:
   name: konnek-receiver
 spec:
   template:
+    metadata: 
+      annotations:
+        autoscaling.knative.dev/minScale: "1"
     spec:
       containers:
-      - image: jonatasbaldin/konnek-knative-receiver
+      - image: konnek/knative-receiver
